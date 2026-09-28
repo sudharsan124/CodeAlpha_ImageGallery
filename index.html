@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames | Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Frames<span>.</span></a>
+        <nav>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">A VISUAL COLLECTION</p>
+            <h1>Moments worth<br>remembering.</h1>
+            <p class="hero-text">
+                A collection of beautiful places, architecture,
+                and moments captured through photography.
+            </p>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">EXPLORE</p>
+                    <h2>Our Gallery</h2>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture</button>
+                    <button class="filter-btn" data-filter="travel">Travel</button>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <article class="gallery-item" data-category="nature">
+                    <img
+                        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800"
+                        alt="Mountain lake surrounded by green hills"
+                        data-title="Mountain Escape"
+                        data-category="Nature"
+                    >
+                    <div class="image-info">
+                        <h3>Mountain Escape</h3>
+                        <p>Nature</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="architecture">
+                    <img
+                        src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800"
+                        alt="Modern architectural building"
+                        data-title="Modern Lines"
+                        data-category="Architecture"
+                    >
+                    <div class="image-info">
+                        <h3>Modern Lines</h3>
+                        <p>Architecture</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="travel">
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800"
+                        alt="Beautiful landscape during a journey"
+                        data-title="Open Roads"
+                        data-category="Travel"
+                    >
+                    <div class="image-info">
+                        <h3>Open Roads</h3>
+                        <p>Travel</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="nature">
+                    <img
+                        src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800"
+                        alt="Sunlight passing through a forest"
+                        data-title="Into the Forest"
+                        data-category="Nature"
+                    >
+                    <div class="image-info">
+                        <h3>Into the Forest</h3>
+                        <p>Nature</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="architecture">
+                    <img
+                        src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800"
+                        alt="White modern building"
+                        data-title="Clean Architecture"
+                        data-category="Architecture"
+                    >
+                    <div class="image-info">
+                        <h3>Clean Architecture</h3>
+                        <p>Architecture</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item" data-category="travel">
+                    <img
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800"
+                        alt="Mountain peaks under a clear sky"
+                        data-title="The Highlands"
+                        data-category="Travel"
+                    >
+                    <div class="image-info">
+                        <h3>The Highlands</h3>
+                        <p>Travel</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <p class="eyebrow">ABOUT THIS PROJECT</p>
+            <h2>Every picture tells a story.</h2>
+            <p>
+                Frames is a simple and minimal image gallery built
+                with HTML, CSS, and JavaScript. Explore the collection
+                and open images to view them in detail.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Frames. Created for CodeAlpha Internship.</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="close-btn" id="closeBtn" aria-label="Close">&times;</button>
+
+        <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous image">
+            &#10094;
+        </button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-info">
+                <div>
+                    <h2 id="lightboxTitle"></h2>
+                    <p id="lightboxCategory"></p>
+                </div>
+                <span id="lightboxCounter"></span>
+            </div>
+        </div>
+
+        <button class="nav-btn next-btn" id="nextBtn" aria-label="Next image">
+            &#10095;
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
